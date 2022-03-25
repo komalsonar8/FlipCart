@@ -1,1 +1,44 @@
-<p>products works!</p>
+<!-- <p>products works!</p> -->
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a>
+                <img src="assets/img/download (1).jpg"> Mobile
+             </a>
+        </div>
+       
+        <div class="item">
+            <a>
+            <img src="assets/img/download (2).jpg">Fashion
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <img src="assets/img/download (3).jpg">Jwellery
+                </a>
+        </div>
+        <div class="item">
+            <a>
+                <img style="width:62px; margin-top:5px;" src="assets/img/download.jpg">Food
+                </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productlist">
+
+            <div class="card col-md-4">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width:100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width:100ch;">{{item.description}}</p>
+                <p><strong>Price:</strong>Rs.{{item.price}}</p>
+                <button class="btn btn-primary">Add To Cart</button>
+    
+            </div>
+    
+        </ng-container>
+        </div>
+</div>
